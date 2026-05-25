@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, IconButton, Badge, Menu, MenuItem, Avatar, Box, Container, InputBase } from '@mui/material';
-import { ShoppingCart, AccountCircle, Menu as MenuIcon, Search, Hiking, LocalShipping, Support } from '@mui/icons-material';
+import { ShoppingCart, AccountCircle, Menu as MenuIcon, Search, Hiking } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
 
