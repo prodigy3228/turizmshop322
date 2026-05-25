@@ -13,20 +13,9 @@ class UsersConfig(AppConfig):
     name = 'users'
 
     def ready(self):
-        # Импортируем здесь, чтобы избежать ошибки AppRegistryNotReady
-        from django.contrib.auth import get_user_model
-        
-        def create_superuser(sender, **kwargs):
-            User = get_user_model()
-            username = "admin"
-            email = "admin@example.com"
-            password = "AdminPass123"  # Замените на свой пароль
-            
-            if not User.objects.filter(username=username).exists():
-                User.objects.create_superuser(username, email, password)
-                print(f"✅ Суперпользователь {username} создан!")
-            else:
-                print(f"✅ Пользователь {username} уже существует.")
-        
-        # Подключаем функцию к сигналу post_migrate
-        post_migrate.connect(create_superuser, sender=self)
+    # АЛЬТЕРНАТИВНЫЙ МЕТОД: принудительное создание админа с ясным паролем
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser('admin', 'admin@example.com', 'admin123')
+        print("+++ Админ admin/admin123 создан! +++")
