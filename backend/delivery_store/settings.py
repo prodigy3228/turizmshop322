@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-n(ce%h+(5k^30#e-b@#d(0(zcud+c(%qn3+rcyty5p7a%81nul
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com', 'turizmshop-api.onrender.com']
 
 
 # Application definition
