@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'corsheaders',
     
     # Custom apps
-    'users',
+    'users.apps.UsersConfig',
     'products',
     'orders',
 ]
