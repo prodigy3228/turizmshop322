@@ -13,7 +13,7 @@ class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
 class ProductViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [permissions.AllowAny]
     filterset_fields = ['category', 'in_stock']
     search_fields = ['name', 'description']
     
