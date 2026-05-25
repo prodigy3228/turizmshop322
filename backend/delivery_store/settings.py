@@ -164,3 +164,34 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
+
+# CORS settings
+CORS_ALLOW_ALL_ORIGINS = False  # Для продакшена не используйте True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://turizmshop-clean.vercel.app",  # URL вашего фронтенда на Vercel
+    "http://localhost:3000",                 # Для локальной разработки
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
