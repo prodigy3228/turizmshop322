@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Typography, Grid, Card, CardMedia, CardContent, CardActions, Button, Box, Rating, InputBase } from '@mui/material';
+import { LocalShipping, Security, Support, NavigateNext, ShoppingCart, Terrain, AcUnit, WbSunny, Park, Hiking} from '@mui/icons-material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -52,7 +53,7 @@ const swiperStyles = {
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
   const [featuredProducts, setFeaturedProducts] = useState([]);
-//// const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const { addToCart } = useCart();
 
   // Slider images for tourism equipment
